@@ -14,8 +14,8 @@ public class IndexViewController {
 	@GetMapping("/")
 	public String startPage (Model model) {
 		model.addAttribute("productCount", 5);
-		ProductEntity newProduct = new ProductEntity();
-		productRepository.save(newProduct);
+		/*ProductEntity newProduct = new ProductEntity();
+		productRepository.save(newProduct);*/
 		return "index.html";
 	}
 }
