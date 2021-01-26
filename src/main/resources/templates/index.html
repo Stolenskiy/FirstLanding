@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ua" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing page</title>
+</head>
+<body>
+<h1>Hello. It is your first trading internet platform</h1>
+<!--/*@thymesVar id="productCount" type="java.lang.Integer"*/-->
+<h3 th:text="'You have ' + ${productCount} + ' products'"> Text </h3>
+</body>
+</html>
