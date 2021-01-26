@@ -13,9 +13,12 @@ public class IndexViewController {
 	private IProductRepository productRepository;
 	@GetMapping("/")
 	public String startPage (Model model) {
-		model.addAttribute("productCount", productRepository.findAll().size());
-		/*ProductEntity newProduct = new ProductEntity();
-		productRepository.save(newProduct);*/
+		int size = productRepository.findAll().size();
+		model.addAttribute("productCount", size);
+		ProductEntity newProduct = new ProductEntity();
+		newProduct.setMainName("name" + size);
+		newProduct.setPrice(5);
+		productRepository.save(newProduct);
 		return "index.html";
 	}
 }
