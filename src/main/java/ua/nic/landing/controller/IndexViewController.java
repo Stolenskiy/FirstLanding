@@ -21,4 +21,8 @@ public class IndexViewController {
 		productRepository.save(newProduct);
 		return "index.html";
 	}
+	@GetMapping("/2")
+	public String secondPage (Model model) {
+		return "index2.html";
+	}
 }
