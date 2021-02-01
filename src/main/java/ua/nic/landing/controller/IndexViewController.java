@@ -15,7 +15,7 @@ public class IndexViewController {
 	private IProductRepository productRepository;
 	@GetMapping("/")
 	public String startPage (Model model) {
-		List<ProductEntity> products = productRepository.findAll();
+//		List<ProductEntity> products = productRepository.findAll();
 //		model.addAttribute("products", products);
 		return "index.html";
 	}
