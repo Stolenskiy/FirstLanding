@@ -7,18 +7,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import ua.nic.landing.model.ProductEntity;
 import ua.nic.landing.repository.IProductRepository;
 
+import java.util.List;
+
 @Controller
 public class IndexViewController {
 	@Autowired
 	private IProductRepository productRepository;
 	@GetMapping("/")
 	public String startPage (Model model) {
-		int size = productRepository.findAll().size();
-		model.addAttribute("productCount", size);
-		ProductEntity newProduct = new ProductEntity();
-		newProduct.setMainName("name" + size);
-		newProduct.setPrice(5);
-		productRepository.save(newProduct);
+		List<ProductEntity> products = productRepository.findAll();
+//		model.addAttribute("products", products);
 		return "index.html";
 	}
 	@GetMapping("/2")
