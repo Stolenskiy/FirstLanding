@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "characteristics", schema = "public", catalog = "LendingDB")
+@Table(name = "characteristics", schema = "public", catalog = "d47pkomav9lts4")
 public class CharacteristicsEntity {
 	private int id;
 	private String title;
@@ -12,7 +12,6 @@ public class CharacteristicsEntity {
 	private Integer productId;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
 	public int getId() {
 		return id;

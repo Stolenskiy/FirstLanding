@@ -4,14 +4,14 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "image", schema = "public", catalog = "LendingDB")
+@Table(name = "image", schema = "public", catalog = "d47pkomav9lts4")
 public class ImageEntity {
 	private int id;
 	private String expansion;
 	private Integer productId;
+	private Boolean mainImage;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
 	public int getId() {
 		return id;
@@ -41,16 +41,26 @@ public class ImageEntity {
 		this.productId = productId;
 	}
 
+	@Basic
+	@Column(name = "main_image", nullable = true)
+	public Boolean getMainImage() {
+		return mainImage;
+	}
+
+	public void setMainImage(Boolean mainImage) {
+		this.mainImage = mainImage;
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		ImageEntity that = (ImageEntity) o;
-		return id == that.id && Objects.equals(expansion, that.expansion) && Objects.equals(productId, that.productId);
+		return id == that.id && Objects.equals(expansion, that.expansion) && Objects.equals(productId, that.productId) && Objects.equals(mainImage, that.mainImage);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, expansion, productId);
+		return Objects.hash(id, expansion, productId, mainImage);
 	}
 }

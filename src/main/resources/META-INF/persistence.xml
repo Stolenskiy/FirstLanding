@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+  <persistence-unit name="default">
+
+      <class>ua.nic.landing.model.CharacteristicsEntity</class>
+      <class>ua.nic.landing.model.ImageEntity</class>
+      <class>ua.nic.landing.model.ProductEntity</class>
+      <properties>
+          <property name="hibernate.connection.url"
+                    value="jdbc:postgresql://ec2-176-34-114-78.eu-west-1.compute.amazonaws.com:5432/d47pkomav9lts4"/>
+          <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+      </properties>
+  </persistence-unit>
+    <persistence-unit name="persistenceUnit"/>
+</persistence>
