@@ -13,4 +13,5 @@ import java.util.Set;
 public interface IImageRepository extends JpaRepository<ImageEntity, Integer> {
 
 	List<ImageEntity> findByProductIdInAndMainImage(List<Integer> productIds, boolean mainImage);
+	List<ImageEntity> findByProductId(Integer productId);
 }

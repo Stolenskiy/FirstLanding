@@ -36,7 +36,7 @@ public class IndexViewController {
 		return "index.html";
 	}
 
-	@GetMapping("/2")
+	@GetMapping("/productDeteils{")
 	public String secondPage(Model model) {
 		return "index2.html";
 	}

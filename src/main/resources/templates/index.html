@@ -393,7 +393,7 @@
                                         <div class="row">
                                             <div class="col-12 col-lg-5">
                                                 <div class="quickview_pro_img">
-                                                    <img alt="" src="${imagePath}">
+<!--                                                    <img alt="" src="${imagePath}">-->
                                                 </div>
                                             </div>
                                             <div class="col-12 col-lg-7">
@@ -412,7 +412,8 @@
                                                         price
                                                         <span>$130 discont</span></h5>
                                                     <p th:text="${selectedProduct.getDescription()}">description</p>
-                                                    <a href="#">View Full Product Details</a>
+                                                    <a th:href="@{/productDetails(
+                               productId=${selectedProduct.getId()})}">Детальніше</a>
                                                 </div>
                                                 <!-- Add to Cart Form -->
                                                 <form class="cart" method="post">
