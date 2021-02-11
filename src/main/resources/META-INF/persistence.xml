@@ -5,7 +5,7 @@
              version="3.0">
   <persistence-unit name="default">
 
-      <class>ua.nic.landing.model.CharacteristicsEntity</class>
+      <class>ua.nic.landing.model.CharacteristicEntity</class>
       <class>ua.nic.landing.model.ImageEntity</class>
       <class>ua.nic.landing.model.ProductEntity</class>
       <properties>
